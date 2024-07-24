@@ -13,7 +13,7 @@ export default function Login() {
             alert("Fill All Inputs Properly !")
         }
         else {
-            axios.post("http://localhost:8080/LoginDta", { pass, email }).then((data) => {
+            axios.post("https://socailmediamern.onrender.com/LoginDta", { pass, email }).then((data) => {
                 if (data.data.mess === "hai") {
                     setcred(false);
                     window.localStorage.setItem("token", data.data.token);
