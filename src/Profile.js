@@ -23,7 +23,7 @@ export default function Profile() {
 
         axios({
             method: "post",
-            url: "http://localhost:8080/imgData",
+            url: "https://socailmediamern.onrender.com/imgData",
             data: data,
             config: {
                 headers: {
@@ -38,7 +38,7 @@ export default function Profile() {
 
     };
     useEffect(() => {
-        axios.get(`http://localhost:8080/postGet/?id=${window.localStorage.getItem("id")}`).then((res) => {
+        axios.get(`https://socailmediamern.onrender.com/postGet/?id=${window.localStorage.getItem("id")}`).then((res) => {
             setpost(res.data)
         }).catch((er) => {
             console.log(er)
@@ -49,7 +49,7 @@ export default function Profile() {
     function delPost(id) {
         console.log(id)
         let pid=window.localStorage.getItem("id");
-        axios.post("http://localhost:8080/del", { id: id,pid:pid })
+        axios.post("https://socailmediamern.onrender.com/del", { id: id,pid:pid })
         window.location.reload();
 
     }
