@@ -16,13 +16,7 @@ export default function Post() {
             imgref.current.src = URL.createObjectURL(file)
 
         }
-
-
-
-
     }
-
-
 
     function handle(e) {
         e.preventDefault();
@@ -36,7 +30,7 @@ export default function Post() {
 
             axios({
                 method: "post",
-                url: "http://localhost:8080/posts",
+                url: "https://socailmediamern.onrender.com/posts",
                 data: data,
                 config: {
                     headers: {
