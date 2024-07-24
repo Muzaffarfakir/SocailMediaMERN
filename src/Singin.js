@@ -19,7 +19,7 @@ export default function Singing() {
 
         }
         else {
-            axios.post("http://localhost:8080/signData", { name, email, pass, des, con }).then((res) => {
+            axios.post("https://socailmediamern.onrender.com/signData", { name, email, pass, des, con }).then((res) => {
                 if (res.data === "invalid") {
                     setSignColor(true);
                     console.log(res.data)
