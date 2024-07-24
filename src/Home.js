@@ -17,7 +17,7 @@ export default function Home() {
 
 
     useEffect(() => {
-        fetch("http://localhost:8080/Allposts").then((res) => res.json()).then((data) => {
+        fetch("https://socailmediamern.onrender.com/Allposts").then((res) => res.json()).then((data) => {
             setposts(data)
         })
     }, [])
