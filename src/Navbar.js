@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { BrowserRouter, Route, Routes, Link, useNavigate } from "react-router-dom"
+import { BrowserRouter,HashRouter, Route, Routes, Link, useNavigate } from "react-router-dom"
 import Profile from "./Profile";
 import Home from "./Home";
 import Singing from "./Singin";
@@ -24,7 +24,7 @@ export default function Navbar() {
 
     return (
         <>
-            <BrowserRouter>
+            <HashRouter hashType="noslash">
                 <Link to={"/"} className="d-none">Home</Link>
                 <div className="d-flex mx-3 my-5 ">
                     <button onClick={() => { document.body.style.backgroundColor = "white"; document.body.style.color = "black" }} className="btn bg-light text-dark rounded-pill">Light</button>
@@ -59,7 +59,7 @@ export default function Navbar() {
                     <Route path="/" element={<Home />} />
 
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
 
 
         </>
